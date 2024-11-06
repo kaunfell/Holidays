@@ -1,4 +1,116 @@
-.hero{
-    background-color: rgb(83, 142, 182);
-    height: 200px;
+
+/*Instead of using multiple CSS files for every theme, 
+we can use data-themes and get them using only ONE line in JS :)*/
+
+:root {
+    --theme-color: #f1f2f3;
+    --text-color: #000000;
+  }
+
+body{
+    font-size: 16px;
+    
 }
+
+
+
+  
+.hero{
+    background-color: var(--bg-hero);
+    color: var(--hero-color);
+    
+
+    height: 250px;  
+}
+h1{
+    font-size: 3.5rem !important;
+}
+
+.mainContainer{
+    background-color: var(--mainContainer-bg);
+
+    height: 500px;
+}
+
+.resultContainer{
+    color: var(--result-color);
+}
+
+
+
+.gnomeBtn{
+    background-color: red;
+    height: 30px;
+    width: 90px;
+    padding: 0%;
+    opacity: 0;
+}
+
+.gnomeMeme{
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+
+/*Color Themes, static days*/
+
+body[data-theme="Valitse-päivä-ylävalikosta"]{
+     background-color:rgb(208, 232, 197);
+
+    --bg-hero: rgb(63, 133, 165);
+    --hero-color: rgb(208, 232, 197);
+
+    --mainContainer-bg: rgb(255, 248, 222);
+}
+
+
+ body[data-theme="Itsenäisyyspäivä"]{
+    background-color: rgb(25, 85, 175);
+
+    --bg-hero: rgb(233, 245, 237);
+    --hero-color: rgb(65, 99, 247);
+    --mainContainer-bg: rgb(255, 248, 222);
+ }
+
+
+  body[data-theme="Joulu"] {
+    background-color: rgb(184, 0, 31);
+
+    --bg-hero: rgb(252, 250, 238);
+    --hero-color: rgb(204, 100, 40);
+
+    --mainContainer-bg:rgb(80, 118, 135);
+    --result-color: rgb(252, 250, 238);
+  }
+
+  body[data-theme="Uusivuosi"]{
+    background-color: rgb(9, 16, 87);
+
+    --bg-hero: rgb(2, 76, 170);
+    --hero-color: rgb(236, 131, 5);
+
+    --mainContainer-bg:rgb(233, 165, 81);
+    --result-color: rgb(167, 83, 155);
+  }
+
+  body[data-theme="Vappu"]{  
+    background-color: rgb(177, 214, 144);
+
+    --bg-hero: rgb(228, 129, 198);
+    --hero-color: yellow;
+
+    --mainContainer-bg: rgb(237, 247, 108);
+    --result-color: rgb(167, 83, 155);
+  }
+
+  body[data-theme="Ystävänpäivä"] {
+    background-color: rgb(250, 211, 231);
+
+    --bg-hero: rgb(249, 181, 208);
+    --hero-color: rgb(187, 78, 120);
+
+    --mainContainer-bg: rgb(248, 232, 238);
+    --result-color: rgb(167, 83, 155);
+  }
